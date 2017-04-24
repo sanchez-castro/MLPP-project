@@ -11,11 +11,23 @@ date: "April, 2017"
 # Project goals
 
 ## Problem definition
+
 ## Importance
+
 ## Impact
+
 ## Who cares
+The public, the police department 
+
 ## Who will take action based on your work
+The Charlotte-Mecklenburg Police Department (CMPD) will apply the machine learning algorithms we have devised to improve on their existing Early Intervention System. By detecting police officers at risk of adverse events prior to them committing the action, the CMPD can direct these officers to retraining programmes to extract them from high-stress environments, remind them the ethos of the CMPD and improve on their capacity to deal with such situations.
+
 ## What are the policy goals you care about?
+Leveraging on a more data-driven approach in the Early Intervention System allows the department to better identify police officers at risk, increase internal accountability and reduce inappropriate uses of force. 
+
+A tangible policy goal we would like achieve through this project is a safer public-facing CMPD. 
+
+By reducing the number of adverse actions committed by the CMPD, we hope to ease the existing tensions and foster stronger trust between the community and the CMPD. A tangible policy goals that we would like to achieve through this project is a reduction of instances of unjustified deadly shootings or instances of racial profiling. 
 
 # Data
 
