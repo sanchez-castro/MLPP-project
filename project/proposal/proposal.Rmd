@@ -9,39 +9,47 @@ date: "April, 2017"
 ---
 
 # Project goals
-In light of political and public uproar regarding police-officers using deadly force towards members of the public, our group hopes to reduce these incidents by strengthening the Early Intervention System with machine learning algorithms. 
+To increase the trust in the police, ensure the proper use of the public force, and decrease the risk of public officers, our group aims to strengthen the Early Intervention System for the Charlotte-Mecklenburg Police Department (CMPD) through machine learning algorithms. 
 
 ## Problem definition
-The advent of social media has placed the actions of police officers under severe scrutiny. In recent years, there has been videos and pictures of police officers performing adverse actions to civilians circulating online. The circulations of these content has resulted in an incensed public and strained the relationship between the American police force and its civilians.  
+Besides efforts to prevent officers' incidents, there is still room for improvement to increase the security system and ensure that best application of law. 
+
+Recently, the advent of social media has placed the actions of police officers under severe scrutiny. There has been videos and pictures of police officers performing adverse actions to civilians circulating online. This media coverage has increased the incentives of the police department to improve their procedures to ensure that the public trust in them.
 
 ## Importance and Impact
-Since the goal of the police force is the ensure safety of the civilians, it is important to restore the trust between police and the general public so that the general public can feel "safe" again. 
+Security is required for civilians, and it is the goal of the police force. The importance of this measure is regarding two different dimensions. On the one hand, to ensure the best rule of law, it is required to develop the better procedures for police officers. On the other hand, this action can increase the trust in the policy, given that incidents can be reduced. 
 
 ## Who cares
-The White House has placed public safety, law enforcement and community relations as one of its top priorities. This is evident from the Launch of the Task Force on 21st Century Policing by President Obama in 2015. The goal of the Task Force is to gain a better understanding of specific policing challenges and devise actionable plans to improve law enforcement and enhance community engagement. 
+
+The White House has placed public safety, law enforcement and community relations as one of its top priorities. Also, civil society has expressed its concern in many different forums. 
 
 ## Who will take action based on your work
-The Charlotte-Mecklenburg Police Department (CMPD) will apply the machine learning algorithms we have devised to improve on their existing Early Intervention System. By detecting police officers at risk of adverse events prior to them committing the action, the CMPD can direct these officers to retraining programmes to extract them from high-stress environments, remind them the ethos of the CMPD and improve on their capacity to deal with such situations.
+The Charlotte-Mecklenburg Police Department (CMPD) would apply our recommendations based on machine learning algorithms to improve on their existing Early Intervention System. By detecting police officers at risk of adverse events prior to them committing the action, the CMPD can direct these officers to retrain programmes to extract them from high-stress environments, and improve their capacity to deal with such situations.
 
 ## What are the policy goals you care about?
-Leveraging on a more data-driven approach in the Early Intervention System allows the department to better identify police officers at risk, increase internal accountability and reduce inappropriate uses of force. A tangible policy goal we would like achieve through this project is a safer public-facing CMPD, without compromising law enforcement. We also hope to achieve a more intangible goal: to ease the existing tensions and foster stronger trust between the community and the CMPD. 
+
+Improve the Early Intervention System to better identify police officers at risk, increase internal accountability and reduce inappropriate uses of force.
+
+Other secondary goals are achieve a safer public-facing CMPD, without compromising law enforcement; ease the existing tensions; foster stronger trust between the community and the CMPD. 
 
 # Data
-The data consists of a detailed event record of each police officer and the officer's demographic information. This extensive dataset has been collected by the CMPD to manage their daily operations. Our outcome variable, adverse events conducted by police officers, is extracted from the incident records when an incident is ruled by the Internal Affairs to be preventable, unjustified and sustained. Other variables of the data include officer dispatch events, criminal complaints made by citizens, traffic stops and arrests made by officers, employee records, secondary employment and neighborhood. 
+The data consists of a detailed event record of each police officer and the officer's demographic information. This extensive dataset has been collected by the CMPD to manage their daily operations. Our outcome variable, adverse events conducted by police officers, is extracted from the incident records when an incident is ruled by the Internal Affairs to be preventable, unjustified and sustained. Other useful variables for the analysis include officer dispatch events, criminal complaints made by citizens, traffic stops and arrests made by officers, employee records, secondary employment and neighborhood. 
 
 # Analysis
-We are looking to identify a risk ranking score that determines the probability that police officers will engage in adverse event/misconduct behavior^[We refer to adverse events or misconduct behavior for the following criteria: (1) officer's improper use of force, (2) citizen or officer injury or accident and (3) any sustained serious complaint from a citizen or colleague.]. As explained before, our predictors (features) will be **** from a time-period that will predict a risk ranking score which could be used, at different thresholds, to obtain a dummy output variable ${0,1}$ for a top-N list, that indicate if an officer is likely to misbehave in a period of time. 
+We are looking to identify a risk ranking score (our dependent variable) that determines the probability that police officers will engage in adverse event/misconduct behavior^[We refer to adverse events or misconduct behavior for the following criteria: (1) officer's improper use of force, (2) citizen or officer injury or accident and (3) any sustained serious complaint from a citizen or colleague.]. 
 
-As the previous section describes, our label (dependent variable) will be based on the 
+We will implement Machine Learning techniques, with features such as number of resisted arrests, number of injuries, number of criminals who assaulted an officer, number of crime related events, average weight of suspects, the average height of suspects. All that measures at the officer level in a defined time period, which we will define through empirical testing. With that information, we will predict a risk ranking score which could be used, at different thresholds, to obtain a dummy output variable ${0,1}$ for a top-N list, that indicate if an officer is likely to misbehave in a period of time. 
 
 For this endeavor, we will look to implement three different binary classification models: Logistic Regression, Support Vector Machine (SVM's) and Random Forests. We expect to estimate the probability assigned to class $C_i$ from the three proposed models with distinct parameters settings. 
 
 ## What actions will this enable or improve?
 The objective of police departments is to train and retain the very highest quality police force. As budget constraints exists, police officers need to train and mentor those that needed the most. In this sense, the objective is to better identify police officers that are riskier to misconduct. By the provision of a score (probability) to each police officer, we could rank police officers by the risk of adverse behavior controlling for precision-recall tradeoffs that can give more control and flexibility to police departments to make interventions such as training, counselling or mentorship that can improve their quality services to the society.
-As there are limited resources to intervene all the police force, the ranking allows to the police department to adjust the risk threshold depending on their resources and their capacity to intervene police officers.
+As there are limited resources to intervene all the police force, the ranking allows to the police department to adjust the risk threshold depending on their resources and their capacity to intervene police officers. To sum up, our recommendations will allow the CMPD to enhance its allocation of resources due to a ranking approach that identifies the riskiest officers, which will allow prioritizing in the enrollment of early intervention programs.
 
 # Evaluation
-We will train our data for a fixed period of time, 2013-2014, to test in 2015. As we expect that our class of interest is the minority class, accuracy and performance on the majority class are not the right metrics to optimize. For this reason, for assessing the classification performance, we will use precision (true negative rate), the proportion of actual positives among the predicted positives.^[Flach, Peter. Machine learning: the art and science of algorithms that make sense of data. Cambridge University Press, 2012]. We will evaluate the process with a 3-fold cross validation in order to compare the models.
+We will train our data for a fixed period of time, likely 2013-2014, to test in 2015. However, we will look to different approaches to cross-validation and testing to identify if information of other years is useful for the final model. 
+
+As we expect that our class of interest is the minority class (incidents), accuracy and performance on the majority class are not the right metrics to optimize. For this reason, for assessing the classification performance, we will use precision (true negative rate), the proportion of actual positives among the predicted positives.^[Flach, Peter. Machine learning: the art and science of algorithms that make sense of data. Cambridge University Press, 2012] We will evaluate the process with a N-fold cross validation in order to compare the models. The N will be defined through practical considerations.
 
 # Policy recommendations.
 
