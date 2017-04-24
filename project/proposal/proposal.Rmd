@@ -1,7 +1,7 @@
 ---
 title: "Project Proposal"
 subtitle: "Machine Learning for Public Policy"
-author: "Cheng Yee Lim, Rodrigo Valdez-Ortiz, J.Adrián Sánchez"
+author: "Cheng Yee Lim, Rodrigo Valdes-Ortiz, J.Adrián Sánchez"
 output:
   pdf_document: default
   html_notebook: default
@@ -43,9 +43,17 @@ As there are limited resources to intervene all the police force, the ranking al
 # Evaluation
 We will train our data for a fixed period of time, 2013-2014, to test in 2015. As we expect that our class of interest is the minority class, accuracy and performance on the majority class are not the right metrics to optimize. For this reason, for assessing the classification performance, we will use precision (true negative rate), the proportion of actual positives among the predicted positives.^[Flach, Peter. Machine learning: the art and science of algorithms that make sense of data. Cambridge University Press, 2012]. We will evaluate the process with a 3-fold cross validation in order to compare the models.
 
+# Policy recommendations.
 
+## Kind of recommendations we hope to give to policymakers
+We aim to generate a public policy recommendation for the CMPD. For instance, the objective will be to improve the current system for early interventions. 
 
+The design of this plan will take care that the proposal will be: 1) feasible, within a moderate budget range; 2) better that the actual system (if not, the recommendation is meaningless); 3) political viable, that is to say, that its implementation is realistic given the political constraints.
 
-# Policy recommendations: 
-  ## What kind of recommendations do you hope to give to policymakers based on this analysis/project. 
-  ## How will you validate whether what you are proposing will have the desired impact?
+In specific, the recommendations will be rules to improve their daily operations. For instance, practices like if an officer has been injured two times in the last six months, and has been in two resisted arrests during the past 12 months, assign him to a low-risk area for the next three months. Also, given the limited scope of the project, the recommendations can be design a particular policy for certain officers that we know are at risk. For example, maybe police officers, who are white, between 40 and 50 years old, married, and with more than three arrests related to drugs in the last six months need a particular policy because we know they are at high risk. Specific recommendations need to be discussed with people closer to the daily-basis operations to avoid implausible public policies.
+
+## Validate that our policy will have the desired impact
+
+We can verify our policy in two stages. The first one, before the implementation phase, is run computer simulations with our model to assess the possible results of our recommendations. Then, modify and simplify our recommendation until we produce one with two characteristics: 1) maximize positive results, 2) be feasible and straightforward to operationalize (or the closest to that). At the same time of computer simulations, it will be clue to talk with experts in the field to find reasonable possible outcomes. The effects can be dramatically different of the simulations if we omit key behaviours that experts will know better than us.
+
+The second one is after the application of our public policy. We will validate or implementation against historical data and possible future trends with and without our policy. For instance, one of the methods to evaluate our program will be regression discontinuity to detect structural changes in the patterns before and after the policy. Another way can be, limited to operational and political constraints, make a randomized control experiment with this plan. That is to say, implement the policy in some small subsamples of the population and compare its outcomes with the general ones through econometrics. Then, it will be possible to find it out if the new proposed methodology has the desired impact. Finally, other simple approaches can be implemented, such as compare historical data of the same month, or analyze correlations of incident indicators and relevant variables, like temperature, festivals, vacations days, snow days, or others that can affect the probability of officer's adverse events.
