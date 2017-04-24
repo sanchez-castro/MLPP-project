@@ -9,30 +9,25 @@ date: "April, 2017"
 ---
 
 # Project goals
+In light of political and public uproar regarding police-officers using deadly force towards members of the public, our group hopes to reduce these incidents by strengthening the Early Intervention System with machine learning algorithms. 
 
 ## Problem definition
+The advent of social media has placed the actions of police officers under severe scrutiny. In recent years, there has been videos and pictures of police officers performing adverse actions to civilians circulating online. The circulations of these content has resulted in an incensed public and strained the relationship between the American police force and its civilians.  
 
-## Importance
-
-## Impact
+## Importance and Impact
+Since the goal of the police force is the ensure safety of the civilians, it is important to restore the trust between police and the general public so that the general public can feel "safe" again. 
 
 ## Who cares
-The public, the police department 
+The White House has placed public safety, law enforcement and community relations as one of its top priorities. This is evident from the Launch of the Task Force on 21st Century Policing by President Obama in 2015. The goal of the Task Force is to gain a better understanding of specific policing challenges and devise actionable plans to improve law enforcement and enhance community engagement. 
 
 ## Who will take action based on your work
 The Charlotte-Mecklenburg Police Department (CMPD) will apply the machine learning algorithms we have devised to improve on their existing Early Intervention System. By detecting police officers at risk of adverse events prior to them committing the action, the CMPD can direct these officers to retraining programmes to extract them from high-stress environments, remind them the ethos of the CMPD and improve on their capacity to deal with such situations.
 
 ## What are the policy goals you care about?
-Leveraging on a more data-driven approach in the Early Intervention System allows the department to better identify police officers at risk, increase internal accountability and reduce inappropriate uses of force. 
-
-A tangible policy goal we would like achieve through this project is a safer public-facing CMPD. 
-
-By reducing the number of adverse actions committed by the CMPD, we hope to ease the existing tensions and foster stronger trust between the community and the CMPD. A tangible policy goals that we would like to achieve through this project is a reduction of instances of unjustified deadly shootings or instances of racial profiling. 
+Leveraging on a more data-driven approach in the Early Intervention System allows the department to better identify police officers at risk, increase internal accountability and reduce inappropriate uses of force. A tangible policy goal we would like achieve through this project is a safer public-facing CMPD, without compromising law enforcement. We also hope to achieve a more intangible goal: to ease the existing tensions and foster stronger trust between the community and the CMPD. 
 
 # Data
-
-
-
+The data consists of a detailed event record of each police officer and the officer's demographic information. This extensive dataset has been collected by the CMPD to manage their daily operations. 
 
 # Analysis
 We are looking to identify a risk ranking score that determines the probability that police officers will engage in adverse event/misconduct behavior^[We refer to adverse events or misconduct behavior for the following criteria: (1) officer's improper use of force, (2) citizen or officer injury or accident and (3) any sustained serious complaint from a citizen or colleague.]. As explained before, our predictors (features) will be **** from a time-period that will predict a risk ranking score which could be used, at different thresholds, to obtain a dummy output variable ${0,1}$ for a top-N list, that indicate if an officer is likely to misbehave in a period of time. 
